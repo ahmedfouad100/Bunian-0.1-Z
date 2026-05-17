@@ -1,5 +1,5 @@
 import Status from '../components/Dashborad/Status/Status'
-import Breadcrumb from '../components/Dashborad/UI/Breadcrumb';
+import Breadcrumb from '../components/UI/Breadcrumb/Breadcrumb';
 function StatusPage({title}){
     return (
         <>

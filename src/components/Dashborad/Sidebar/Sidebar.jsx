@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import Styles from './Sidebar.module.css'
-function Sidebar() {
+function Sidebar({Udraft,Pdraft}) {
     const links = [
         { icon: "fa-chart-pie", title: "Status", path:"/"},
-        { icon: "fa-users", title: "Users Management", path:"/users"},
-        { icon: "fa-building", title: "Projects Management", path:"/projects"},
+        { icon: "fa-users", title: "Users Management", path:"/users",badge:Udraft},
+        { icon: "fa-building", title: "Projects Management", path:"/projects",badge:Pdraft},
         { icon: "fa-code", title: "Developers Management", path:"/"},
         { icon: "fa-globe", title: "CMS", path:"/"},
         { icon: "fa-comments", title: "Live Chat", path:"/"}
@@ -22,6 +22,7 @@ function Sidebar() {
                             <i className={`fa-solid ${item.icon} `}></i> 
                             {/* me-1 my-2 */}
                             <span> {item.title}</span>
+                            {(!item.badge) && (item.badge != undefined) && <span className="badge text-bg-warning ms-auto">Draft...</span> }
                         </NavLink>
                     ))}
 

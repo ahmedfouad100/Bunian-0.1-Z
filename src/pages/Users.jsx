@@ -1,8 +1,10 @@
-import Breadcrumb from '../components/Dashborad/UI/Breadcrumb';
+import Breadcrumb from '../components/UI/Breadcrumb/Breadcrumb';
+import { Outlet } from 'react-router-dom';
 function Users({title}){
     return (
         <>
         <Breadcrumb title={title}/>
+        <Outlet/>
         </>
     )
 }
