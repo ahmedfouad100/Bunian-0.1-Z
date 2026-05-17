@@ -21,6 +21,7 @@ function Dashboard() {
         <main className="flex-grow-1">
           <Routes>
             <Route path="/" element={<StatusPage title="Home" />} />
+
             <Route path="/users" element={<Users title="Users" />}>
               <Route index element={<TableDash title="Home" />} />
               <Route path="add" element={<FormDash draft={Udraft} setDraft={setUDraft} />} />
@@ -30,6 +31,7 @@ function Dashboard() {
               <Route index element={<TableDash title="Home" />} />
               <Route path="add" element={<FormDash draft={Pdraft} setDraft={setPDraft} />} />
             </Route>
+            
           </Routes>
         </main>
       </div>
