@@ -1,7 +1,7 @@
 // Hook = function = middleware
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const { required } = require("joi");
+const joi = require("joi");
 
 const adminSchema = new mongoose.Schema({
     username:{
@@ -30,6 +30,6 @@ adminSchema.methods.comparePassword= async function(matchedPassword) {
     return await bcrypt.compare(matchedPassword,this.password)
 }
 
-const admin = mongoose.model("admin", adminSchema)
+const Admin = mongoose.model("Admin", adminSchema)
 
-module.exports = admin
+module.exports = Admin
