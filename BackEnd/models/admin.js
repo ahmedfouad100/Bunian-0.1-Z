@@ -18,6 +18,7 @@ const adminSchema = new mongoose.Schema({
         required:true,
         minlength:6, // if type:String
         // min: => if type:number
+        select:false,
     }
 },{timestamps:true})
 
